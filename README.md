@@ -1,4 +1,14 @@
-# auto encoder
+# AutoEncoder
+Autoencoders are neural networks. Neural networks are composed of multiple layers, and the defining aspect of an autoencoder is that the input layers contain exactly as much information as the output layer. The reason that the input layer and output layer has the exact same number of units is that an autoencoder aims to replicate the input data. It outputs a copy of the data after analyzing it and reconstructing it in an unsupervised fashion.
+
+The data that moves through an autoencoder isn’t just mapped straight from input to output, meaning that the network doesn’t just copy the input data. There are three components to an autoencoder: an encoding (input) portion that compresses the data, a component that handles the compressed data (or bottleneck), and a decoder (output) portion. When data is fed into an autoencoder, it is encoded and then compressed down to a smaller size. The network is then trained on the encoded/compressed data and it outputs a recreation of that data.
+
+So why would you want to train a network to just reconstruct the data that is given to it? The reason is that the network learns the “essence”, or most important features of the input data. After you have trained the network, a model can be created that can synthesize similar data, with the addition or subtraction of certain target features. For instance, you could train an autoencoder on grainy images and then use the trained model to remove the grain/noise from the image.
+
+**AutoEncoder Architectur**
+
+![image](https://user-images.githubusercontent.com/86812576/172150842-06115dca-4e5e-4d62-9937-7cd7f30d6ca7.png)
+
 # Import Package
 import common packages:
 - import numpy as np
